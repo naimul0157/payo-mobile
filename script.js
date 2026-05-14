@@ -1,8 +1,9 @@
-// login button functionality
+
+    // login button functionality
 document.getElementById('login-button').addEventListener('click', function(e){
     e.preventDefault()
     // verify number for the login form
-    const mobileNumber = 1731620157;
+    const mobileNumber = "01731620157";
     const pinNumber = 1234;
     const userNumber = document.getElementById("user-number").value;
     const userPinNUmber = document.getElementById('user-pin').value;
@@ -32,5 +33,5 @@ document.getElementById('login-button').addEventListener('click', function(e){
       
         invalid.append(newMessage);
     }
-
 })
+

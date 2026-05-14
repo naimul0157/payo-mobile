@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- daisy ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <!-- tailwind cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awsome link -->
+     <script src="https://kit.fontawesome.com/ea3ef3fca6.js" crossorigin="anonymous"></script>
     <title>Home page</title>
 </head>
-<body>
-    <h1>I am home page</h1>
+<body class="bg-[#f4f5f7] h-[100vh]">
+    <div class="h-[80px] flex justify-between items-center px-5">
+        <div class="flex items-center">
+            <img src="assets/Group.png" alt="" class="mr-5">
+            <div>
+                <h2 class="font-bold">$<span>45000</span></h2>
+                <p>Avialable Balance</p>
+            </div>
+        </div>
+        <div>
+            <button id="logout-hompage" class="btn"><i class="fa-solid fa-arrow-right-from-bracket rotate-180 bg-[#f4f5f6]"></i>Log Out</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+            // logout to index page
+    document.getElementById("logout-hompage").addEventListener('click', function(){
+        window.location.href = 'index.html';
+        // console.log("hello");
+    })
+    </script>
 </body>
 </html>
