@@ -17,7 +17,7 @@
         <div class="flex items-center">
             <img src="assets/Group.png" alt="" class="mr-5 w-[5vw]">
             <div>
-                <h2 class="font-bold">$<span>45000</span></h2>
+                <h2 class="font-bold">$<span id="initial-amount">45000</span></h2>
                 <p class="mt-2">Avialable Balance</p>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <h1 class="mb-5 font-bold px-5">
             Add Money
         </h1>
-        <div class="px-3 bg-white py-10 rounded-2xl">
+        <div id="Add-money-container" class="px-3 bg-white py-10 rounded-2xl mx-4">
             <div>
                 <h1 class="font-bold">
                     Select A bank
@@ -72,7 +72,7 @@
                 <!-- select -->
                  <fieldset class="fieldset">
  
-                <select class="select rounded-2xl bg-[#f4f5f7] w-full mb-5">
+                <select id="bank" class="select rounded-2xl bg-[#f4f5f7] w-full mb-5">
                     <option disabled selected>Pick a browser</option>
                     <option>Ab Bank</option>
                     <option>Al Arafah Bank</option>
@@ -84,30 +84,24 @@
                 <h1 class="font-bold">
                     Bank Account Number
                 </h1>
-                <input type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full mb-5" >
+                <input id="account-number" type="text" placeholder="Enter 11 digit account number" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full mb-5" >
             </div>
             <div>
                   <h1 class="font-bold">
                     Amount to add
                 </h1>
-                <input type="password" type="text" placeholder="Add amount to withdraw" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full mb-5" >
+                <input id="amount-to-add" type="text" placeholder="Add amount to withdraw" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full mb-5" >
             </div>
             <div>
                   <h1 class="font-bold">
                     Pin Number
                 </h1>
-                <input type="password" type="text" placeholder="Enter 4 digit pin number" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full" >
+                <input id="pin" type="password" type="text" placeholder="Enter 4 digit pin number" class="input rounded-2xl bg-[#f4f5f7] mt-5 w-full" >
             </div>
-            <button id="login-button" class="btn btn-primary text-center flex mt-5 w-full rounded-3xl">Add Money</button>
+            <button id="add-money" class="btn btn-primary text-center flex mt-5 w-full rounded-3xl">Add Money</button>
         </div>
     </section>       
-    <script src="script.js"></script>
-    <script>
-            // logout to index page
-    document.getElementById("logout-hompage").addEventListener('click', function(){
-        window.location.href = 'index.html';
-        // console.log("hello");
-    })
+    <script src="home.js">  
     </script>
 </body>
 </html>
