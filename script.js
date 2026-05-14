@@ -30,8 +30,9 @@ document.getElementById('login-button').addEventListener('click', function(e){
 
             document.getElementById('user-pin').value = '';
         }
-      
-        invalid.append(newMessage);
+        // invalid.innerHTML = '';
+        invalid.replaceChildren(newMessage);
+
     }
 })
 
