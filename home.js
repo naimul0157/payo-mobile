@@ -3,37 +3,7 @@
         window.location.href = 'index.html';
         // console.log("hello");
     })
-    // add money style
-    document.getElementById("add-money-form").addEventListener('mouseover', function(){
-        document.getElementById('add-money-form').style.backgroundColor = 'gray'
-        document.getElementById('add-money-form').style.cursor = 'pointer'
-    }
-)
-       document.getElementById("add-money-form").addEventListener('mouseleave', function(){
-        document.getElementById('add-money-form').style.backgroundColor = 'initial'
-    }
-)
-    // cashout money style
-     document.getElementById("cashout-form").addEventListener('mouseover', function(){
-        document.getElementById('cashout-form').style.backgroundColor = 'gray'
-        document.getElementById('cashout-form').style.cursor = 'pointer'
-    }
-)
-       document.getElementById("cashout-form").addEventListener('mouseleave', function(){
-        document.getElementById('cashout-form').style.backgroundColor = 'initial'
-    }
-)
 
-    // add money button work
-    document.getElementById("add-money-form").addEventListener('click', function(){
-        document.getElementById("add-money-list").style.display = 'block';
-        document.getElementById('cashout-money-container').style.display = 'none';
-    })
-    // cashout money button to work
-      document.getElementById("cashout-form").addEventListener('click', function(){
-        document.getElementById("add-money-list").style.display = 'none';
-        document.getElementById('cashout-money-container').style.display = 'block';
-    })
     //add money all funtion added
     document.getElementById("add-money").addEventListener('click', function(){
         // e.preventDefault();
@@ -75,5 +45,75 @@
         const agentNumber = document.getElementById("agent-number").value;
         const CashoutAmount = parseFloat(document.getElementById('cashout-amount').value);
         const pin = document.getElementById('pinNumber').value;
-        console.log(agentNumber, CashoutAmount, pin);
+
+        let AvialableBalance  = parseFloat(document.getElementById('initial-amount').innerText);
+        AvialableBalance = AvialableBalance - CashoutAmount;
+        document.getElementById('initial-amount').innerText = AvialableBalance;
+        
     })
+    // transfer money function
+
+    document.getElementById('transfer-money-button').addEventListener('click', function(){
+          const UserAccountNumber = document.getElementById("user-ac-no").value;
+        const transferAmount = parseFloat(document.getElementById('transfer-amount').value);
+        const pin = document.getElementById('UserPin').value;
+
+        let AvialableBalance  = parseFloat(document.getElementById('initial-amount').innerText);
+        AvialableBalance = AvialableBalance - transferAmount;
+        document.getElementById('initial-amount').innerText = AvialableBalance;
+    })
+
+    //toggling feature
+
+    //add money feature
+    document.getElementById("add-money-form").addEventListener('mouseover', function(){
+        document.getElementById('add-money-form').style.backgroundColor = '#6FC276'
+        document.getElementById('add-money-form').style.cursor = 'pointer'
+    }
+)
+       document.getElementById("add-money-form").addEventListener('mouseleave', function(){
+        document.getElementById('add-money-form').style.backgroundColor = 'initial';
+    }
+)
+    // cashout money feature
+     document.getElementById("cashout-form").addEventListener('mouseover', function(){
+        document.getElementById('cashout-form').style.backgroundColor = '#6FC276'
+        document.getElementById('cashout-form').style.cursor = 'pointer'
+    }
+)
+       document.getElementById("cashout-form").addEventListener('mouseleave', function(){
+        document.getElementById('cashout-form').style.backgroundColor = 'initial'
+    }
+)
+
+    // add money button work
+    document.getElementById("add-money-form").addEventListener('click', function(){
+        document.getElementById("transfer-money-container").style.display = 'none';
+          document.getElementById("add-money-list").style.display = 'block';
+        document.getElementById('cashout-money-container').style.display = 'none';
+    })
+    // cashout money button to work
+      document.getElementById("cashout-form").addEventListener('click', function(){
+      document.getElementById("transfer-money-container").style.display = 'none';
+          document.getElementById("add-money-list").style.display = 'none';
+        document.getElementById('cashout-money-container').style.display = 'block';
+    })
+
+    // transfer money toggle feature
+
+    document.getElementById("transfer-money-btn").addEventListener('click', function(){
+        document.getElementById("transfer-money-container").style.display = 'block';
+          document.getElementById("add-money-list").style.display = 'none';
+        document.getElementById('cashout-money-container').style.display = 'none';
+        
+    })
+        // cashout money feature
+     document.getElementById("transfer-money-btn").addEventListener('mouseover', function(){
+        document.getElementById('transfer-money-btn').style.backgroundColor = '#6FC276'
+        document.getElementById('transfer-money-btn').style.cursor = 'pointer'
+    }
+)
+       document.getElementById("transfer-money-btn").addEventListener('mouseleave', function(){
+        document.getElementById('transfer-money-btn').style.backgroundColor = 'initial'
+    }
+)
